@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  
+        <title>App</title>
+    
+    <body style='background-color: lightpink;'>
+        <h1>WELCOME!!<h1>
+        
+       
+        <div id="pos"></div>
+        <div id="pos1"></div>
+        <div id="pos2"></div>
+        <div id="position"></div>
+        <div id="map"></div>
+        <img id="myImage" height="50%" width="50%"></img>
+        <button id="getLanguage" onclick="getLanguage()">Language</button> 
+        <button id="getDate" onclick="getDate()">Date</button> 
+         <button id="aboutDevice" onclick="aboutDevice()">Device</button>
+         <button id="seeContacts" onclick="seeContacts()">Contacts</button> 
+      
+        
+        <div>    <button id="dialogAlert" onclick="dialogAlert()">Alert!</button> </div>
+            
+       
+        
+       
+        
+        <h3>Check the weather today!<h3>
+        <button id="buttonWeather" onclick="getWeather()" >Weather</button>
+      
+<div id="current-temperature"></div>
+<div id="timezone"></div>
+<div id="summary"></div>
+<div id="currency"></div>
+<img id="icon" >
+            <img src="img/clear-day.png"  height="10%" width="10%">
+            <img src="img/cloudy.png"  height="10%" width="10%">
+            <img src="img/partly-cloudy-day.png"  height="10%" width="10%">
+            <img src="img/rain.png"  height="10%" width="10%">
+            <img src="img/snow.png"  height="10%" width="10%">
+            <img src="img/wind.png"  height="10%" width="10%">
+
+
+<div id="res"></div>
+        </div>
+             
+            
+            </div>
+           
+            
+    <h3>	Currancy Convertion<h3>
+    <div>    <img src="img/currency+exchange+dollar+euro.png" height="20%" width="20%" ></img>
+    </div>
+        <body onload="display()">
+        <div >
+        <div >
+            <div >
+					Amount
+            </div>
+            <div >
+                
+                <div class="col-md-10">
+                    <input type="text" oninput="convert()" id="amount"/>
+                </div>
+            </div>
+            <div >
+                <div > From</div>
+                
+                <div >
+        <select  onchange="convert()" id="To">
+               
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                </select>
+                <div > To</div>
+                 
+                <div > <select  onchange="convert()"id="From">
+                 
+                    <option value="EUR" selected>EUR</option>
+                    <option value="USD">USD</option>
+                    </select>
+            </div>
+            <div>
+                
+               <button type="Rebutton" class="btn btn-light"  onclick="Result()">Sow me the result!</button>
+            </div>
+           
+            <div class="row">
+                <div class="col-md-10" id="print"> </div>
+            </div> 
+        </div>
+    </div>    
+  <div>
+      <h3>Take a picture!<h3>  
+          <img src="img/camera.jpg" height="10%" width="10%">
+          <div>
+      <button id="takePics" onclick="takePics()"> Take Picture</button>
+     
+
+     </div>
+  </div>
+
+</div>
+<h3>See your history!<h3>
+
+<img src="img/five-fat-files.jpg" height="10%" width="10%">
+            <div>
+                   
+                    <button id="buttonFile" onclick="tryingFile()">File</button> 
+                    <div><form name="myForm"  onclick= "tryingFile()" >
+                            Name: <input type="text" id="in">
+
+                            <input type="file" id="myFile">
+                      </form></div>              
+                                   
+                    <div id="content" ></div>   
+                    </div>                 
+                   
+                            <button id="pics" onclick="pics()">Select Photo</button><br>
+                       
+</div>    
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      //  app.initialize();
+    </script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApFPNQ2WxbEueUXMJBPHjLenlPnFo68ls&callback=initMap"></script> 
+</body>
+
+</html>
